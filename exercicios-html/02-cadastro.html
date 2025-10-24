@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Agência de Empregos</title>
+</head>
+
+<body>
+
+       <header>
+              <h1>Formulário de Cadastro</h1>
+              <p>Preencha os campos abaixo.</p>
+       </header>
+
+       <hr>
+
+       <fieldset>
+              <!-- Cadastro na plataforma -->
+
+              <h3>
+                     <legend>Dados Pessoais</legend>
+              </h3>
+
+              <label for="nome">Nome completo:</label><br>
+              <input type="text" id="nome" name="nome" required minlength="3" maxlength="100"
+                     placeholder="Seu nome completo" required><br><br>
+
+              <label for="nascimento">Data de nascimento:</label><br>
+              <input type="date" id="nascimento" name="nascimento" required><br><br>
+
+              <label for="sexo">Sexo:</label><br>
+              <input type="radio" id="sexo_f" name="sexo" value="F" required>
+              <label for="sexo_f">Feminino</label>
+
+              <input type="radio" id="sexo_m" name="sexo" value="M">
+              <label for="sexo_m">Masculino</label>
+
+              <input type="radio" id="sexo_o" name="sexo" value="O">
+              <label for="sexo_o">Outro</label><br><br>
+
+              <label for="telefone">Telefone (apenas números):</label><br>
+              <input type="tel" id="telefone" name="telefone" placeholder="81993689889"
+                     title="Digite somente números, ex: 81993689889"><br><br>
+
+              <label for="email">Email:</label><br>
+              <input type="email" id="email" name="email" required placeholder="seu@email.com"><br><br>
+
+              <label for="site">Portifólio:</label><br>
+              <input type="url" id="site" name="site" placeholder="https://seusite.com"><br><br>
+
+              <label for="usuario">Nome de usuário:</label><br>
+
+              <!-- pattern é um atributo para especificar como deve ser preenchido o campo, quantos caracteres, padrão...-->
+              <input type="text" id="usuario" name="usuario" required pattern="[A-Za-z0-9._-]{3,10}"
+                     title="3 a 10 caracteres: letras, números, ponto, underline ou hífen"
+                     placeholder="usuario123"><br><br>
+
+              <label for="senha">Senha:</label><br>
+              <input type="password" id="senha" name="senha" required minlength="6" maxlength="10"
+                     title="Mínimo 6 caracteres" placeholder="••••••••"><br>
+              <small>Senha com pelo menos 8 caracteres.</small><br><br>
+
+              <label for="confirm_senha">Confirmar senha:</label><br>
+              <input type="password" id="confirm_senha" name="confirm_senha" required minlength="8" maxlength="10"
+                     placeholder="••••••••"><br><br>
+
+              <label for="informativos">Deseja receber informativos e promoções?</label><br>
+              <input type="checkbox" id="informativos" name="informativos" value="sim">
+              <label for="informativos">Sim, quero receber Informações por email</label><br><br>
+
+       </fieldset>
+
+       <hr>
+
+       <footer>
+              <p>© 2025 Rosenyr Michelle Bessoni de Lima. Todos os direitos reservados.</p>
+       </footer>
+
+</body>
+
+</html>
