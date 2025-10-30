@@ -1,83 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Agência de Empregos</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agência de Empregos</title>
+    </head>
 
-<body>
+    <body>
 
-       <header>
-              <h1>Formulário de Cadastro</h1>
-              <p>Preencha os campos abaixo.</p>
-       </header>
+        <header>
+            <h1>Formulário de Cadastro</h1>
+            <p>Preencha os campos abaixo.</p>
+        </header>
 
-       <hr>
+        <hr>
 
-       <fieldset>
-              <!-- Cadastro na plataforma -->
+        <!-- obrigatorio action e method no form -->
+        <form action="#" method="post">
 
-              <h3>
-                     <legend>Dados Pessoais</legend>
-              </h3>
+            <!-- Cadastro na plataforma -->
+            <h3>Dados Pessoais</h3>
 
-              <label for="nome">Nome completo:</label><br>
-              <input type="text" id="nome" name="nome" required minlength="3" maxlength="100"
-                     placeholder="Seu nome completo" required><br><br>
+            <div>
+                <label for="nome">Nome completo:</label><br>
+                <input type="text" id="nome" name="nome" minlength="3" maxlength="100"
+                    placeholder="Seu nome completo" required>
+            </div>
+            <div>
+                <label for="nascimento">Data de nascimento:</label><br>
+                <input type="date" id="nascimento" name="nascimento" required>
+            </div>
+            <div>
+                <label for="sexo">Sexo:</label><br>
+                <input type="radio" id="sexo_f" name="sexo" value="F" required>
+                <label for="sexo_f">Feminino</label>
+            </div>
+            <div>
+                <input type="radio" id="sexo_m" name="sexo" value="M">
+                <label for="sexo_m">Masculino</label>
+            </div>
+            <div>
+                <input type="radio" id="sexo_o" name="sexo" value="O">
+                <label for="sexo_o">Outro</label>
+            </div>
+            <div>
+                <label for="telefone">Telefone (apenas números):</label><br>
+                <input type="tel" id="telefone" name="telefone" placeholder="81993689889"
+                    title="Digite somente números, ex: 81993689889">
+            </div>
+            <div>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required placeholder="seu@email.com">
+            </div>
+            <div>
+                <label for="pet-select">Profissão:</label><br>
+                <select name="pets" id="pet-select">
+                    <option value="">--Escolha uma opção--</option>
+                    <option value="dog">Farmacêutica</option>
+                    <option value="cat">Desenvolvedora</option>
+                    <option value="hamster">Analista</option>
+                    <option value="parrot">Profissional de TI</option>
+                    <option value="spider">Musicista</option>
+                </select>
+            </div>
+            <div>
+                <label for="hobbies">Selecione seus hobbies:</label><br>
+                <select id="hobbies" name="hobbies" multiple size="5">
+                    <option value="leitura">Leitura</option>
+                    <option value="esportes">Esportes</option>
+                    <option value="musica">Música</option>
+                    <option value="viagem">Viagem</option>
+                    <option value="cinema">Cinema</option>
+                    <option value="fotografia">Fotografia</option>
+                    <option value="cozinha">Cozinhar</option>
+                    <option value="jardinagem">Jardinagem</option>
+                    <option value="jogos">Jogos</option>
+                    <option value="artesanato">Artesanato</option>
+                </select>
+            </div>
+            <div>
+                <label for="site">Portifólio:</label><br>
+                <input type="url" id="site" name="site" placeholder="https://seusite.com">
+            </div>
+            <div>
+                <label for="descricao">Minibio:</label><br>
+                <textarea id="descricao" name="descricao" rows="5" cols="60"
+                    placeholder="Conte um pouco sobre você"></textarea><br><br>
+            </div>
+            <div>
+                <label for="avatar">Envie uma foto sua:</label>
+                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+            </div>
+            <div>
+                <label for="usuario">Nome de usuário:</label><br>
+                <!-- pattern é um atributo para especificar como deve ser preenchido o campo, quantos caracteres, padrão...-->
+                <input type="text" id="usuario" name="usuario" required pattern="[A-Za-z0-9._-]{3,10}"
+                    title="3 a 10 caracteres: letras, números, ponto, underline ou hífen" placeholder="usuario123">
+            </div>
+            <div>
+                <label for="senha">Senha:</label><br>
+                <input type="password" id="senha" name="senha" required minlength="6" maxlength="10"
+                    title="Mínimo 6 caracteres" placeholder="••••••••">
+            </div>
+            <div>
+                <label for="confirm_senha">Confirmar senha:</label><br>
+                <input type="password" id="confirm_senha" name="confirm_senha" required minlength="8" maxlength="10"
+                    placeholder="••••••••">
+            </div>
+            <div>
+                <label for="informativos">Deseja receber informativos e promoções?</label><br>
+                <input type="checkbox" id="informativos" name="informativos" value="sim">
+                <label for="informativos">Sim, quero receber Informações por email</label>
+            </div>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+        <hr>
 
-              <label for="nascimento">Data de nascimento:</label><br>
-              <input type="date" id="nascimento" name="nascimento" required><br><br>
+        <footer>
+            <p>© 2025 Rosenyr Michelle Bessoni de Lima. Todos os direitos reservados.</p>
+        </footer>
 
-              <label for="sexo">Sexo:</label><br>
-              <input type="radio" id="sexo_f" name="sexo" value="F" required>
-              <label for="sexo_f">Feminino</label>
-
-              <input type="radio" id="sexo_m" name="sexo" value="M">
-              <label for="sexo_m">Masculino</label>
-
-              <input type="radio" id="sexo_o" name="sexo" value="O">
-              <label for="sexo_o">Outro</label><br><br>
-
-              <label for="telefone">Telefone (apenas números):</label><br>
-              <input type="tel" id="telefone" name="telefone" placeholder="81993689889"
-                     title="Digite somente números, ex: 81993689889"><br><br>
-
-              <label for="email">Email:</label><br>
-              <input type="email" id="email" name="email" required placeholder="seu@email.com"><br><br>
-
-              <label for="site">Portifólio:</label><br>
-              <input type="url" id="site" name="site" placeholder="https://seusite.com"><br><br>
-
-              <label for="usuario">Nome de usuário:</label><br>
-
-              <!-- pattern é um atributo para especificar como deve ser preenchido o campo, quantos caracteres, padrão...-->
-              <input type="text" id="usuario" name="usuario" required pattern="[A-Za-z0-9._-]{3,10}"
-                     title="3 a 10 caracteres: letras, números, ponto, underline ou hífen"
-                     placeholder="usuario123"><br><br>
-
-              <label for="senha">Senha:</label><br>
-              <input type="password" id="senha" name="senha" required minlength="6" maxlength="10"
-                     title="Mínimo 6 caracteres" placeholder="••••••••"><br>
-              <small>Senha com pelo menos 8 caracteres.</small><br><br>
-
-              <label for="confirm_senha">Confirmar senha:</label><br>
-              <input type="password" id="confirm_senha" name="confirm_senha" required minlength="8" maxlength="10"
-                     placeholder="••••••••"><br><br>
-
-              <label for="informativos">Deseja receber informativos e promoções?</label><br>
-              <input type="checkbox" id="informativos" name="informativos" value="sim">
-              <label for="informativos">Sim, quero receber Informações por email</label><br><br>
-
-       </fieldset>
-
-       <hr>
-
-       <footer>
-              <p>© 2025 Rosenyr Michelle Bessoni de Lima. Todos os direitos reservados.</p>
-       </footer>
-
-</body>
+    </body>
 
 </html>

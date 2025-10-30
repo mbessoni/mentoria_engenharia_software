@@ -1,99 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de tarefas</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de tarefas</title>
+    </head>
 
-<body>
-    <header>
+    <body>
+        <header>
+            <h1>Lista de Tarefas</h1>
+            <p>Organize suas atividades do dia</p>
+        </header>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Adicionar nova tarefa</legend>
+                <label for="tarefa">Tarefa:</label><br>
+                <input type="text" id="tarefa" name="tarefa" placeholder="Digite o nome da tarefa" required><br><br>
 
-        <h1>Lista de Tarefas</h1>
-        <p>Organize suas atividades do dia</p>
+                <label for="descricao">Descrição:</label><br>
+                <textarea id="descricao" name="descricao" rows="3" cols="40"
+                    placeholder="Descreva a tarefa"></textarea><br><br>
 
-    </header>
-    <form>
-        <fieldset>
-            <legend>Adicionar nova tarefa</legend>
-            <label for="tarefa">Tarefa:</label><br>
-            <input type="text" id="tarefa" name="tarefa" placeholder="Digite o nome da tarefa" required><br><br>
-
-            <label for="descricao">Descrição:</label><br>
-            <textarea id="descricao" name="descricao" rows="3" cols="40"
-                placeholder="Descreva a tarefa"></textarea><br><br>
-
-            <input type="submit" value="Adicionar Tarefa">
-        </fieldset>
-    </form>
+                <input type="submit" value="Adicionar Tarefa">
+            </fieldset>
+        </form>
 
     <hr>
 
-    <h2>Tarefas Cadastradas</h2>
-    <table border="1" cellpadding="8">
-        <thead>
-            <tr>
-                <th>Tarefa</th>
-                <th>Descrição</th>
-                <th>Status</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
+        <h2>Tarefas Cadastradas</h2>
+        <table border="1" cellpadding="8">
+            <thead>
+                <tr>
+                    <th>Tarefa</th>
+                    <th>Descrição</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
 
-        <tbody>
-            <tr>
-                <td>Estudar HTML</td>
-                <td>Revisar tags semânticas e criar uma página simples.</td>
-                <td>
-                    <input type="checkbox" id="concluir1" name="concluir1">
-                    <label for="concluir1">Concluir</label>
-                </td>
-                <td>
-                    <input type="button" value="Excluir">
-                </td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td>Estudar HTML</td>
+                    <td>Revisar tags semânticas e criar uma página simples.</td>
+                    <td>
+                        <input type="checkbox" id="concluir1" name="concluir1">
+                        <label for="concluir1">Concluir</label>
+                    </td>
+                    <td>
+                        <input type="button" value="Excluir">
+                    </td>
+                </tr>
 
-            <tr>
-                <td>Fazer exercícios</td>
-                <td>Praticar listas, tabelas e formulários em HTML.</td>
-                <td>
-                    <input type="checkbox" id="concluir2" name="concluir2">
-                    <label for="concluir2">Concluir</label>
-                </td>
-                <td>
-                    <input type="button" value="Excluir">
-                </td>
-            </tr>
+                <tr>
+                    <td>Fazer exercícios</td>
+                    <td>Praticar listas, tabelas e formulários em HTML.</td>
+                    <td>
+                        <input type="checkbox" id="concluir2" name="concluir2">
+                        <label for="concluir2">Concluir</label>
+                    </td>
+                    <td>
+                        <input type="button" value="Excluir">
+                    </td>
+                </tr>
 
-            <tr>
-                <td>Ler um artigo</td>
-                <td>Artigo sobre semântica HTML e boas práticas.</td>
-                <td>
-                    <input type="checkbox" id="concluir3" name="concluir3">
-                    <label for="concluir3">Concluir</label>
-                </td>
-                <td>
-                    <input type="button" value="Excluir">
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                <tr>
+                    <td>Ler um artigo</td>
+                    <td>Artigo sobre semântica HTML e boas práticas.</td>
+                    <td>
+                        <input type="checkbox" id="concluir3" name="concluir3">
+                        <label for="concluir3">Concluir</label>
+                    </td>
+                    <td>
+                        <input type="button" value="Excluir">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     <hr>
 
-    <h2>Resumo</h2>
-    <dl>
-        <dt>Total de tarefas:</dt>
-        <dd>3</dd>
-        <dt>Concluídas:</dt>
-        <dd>0</dd>
-        <dt>Pendentes:</dt>
-        <dd>3</dd>
-    </dl>
-
-    <footer>
-        <p>© 2025 Rosenyr Michelle Bessoni de Lima. Todos os direitos reservados.</p>
-    </footer>
-</body>
+        <h2>Resumo</h2>
+        <dl>
+            <dt>Total de tarefas:</dt>
+            <dd>3</dd>
+            <dt>Concluídas:</dt>
+            <dd>0</dd>
+            <dt>Pendentes:</dt>
+            <dd>3</dd>
+        </dl>
+        <footer>
+            <p>© 2025 Rosenyr Michelle Bessoni de Lima. Todos os direitos reservados.</p>
+        </footer>
+    </body>
 
 </html>
